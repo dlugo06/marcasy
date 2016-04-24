@@ -8,6 +8,9 @@
 </head>
 <body>
   <%= render 'refills/navigation' %>
+  <% flash.each do |message_type, message| %>
+    <div class="flash-<%= message_type %>"><%= message %></div>
+  <% end %>
   <%= yield %>
 </body>
 </html>

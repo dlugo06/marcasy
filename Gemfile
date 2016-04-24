@@ -7,7 +7,6 @@ gem 'bcrypt'
 gem 'better_errors'
 gem 'bourbon', '5.0.0.beta.4'
 gem 'neat'
-gem "refills", group: :development
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -39,6 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :production do
   gem 'rails_12factor'
+  gem 'puma'
 end
 
 group :development, :test do
@@ -49,6 +49,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem "refills"
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
